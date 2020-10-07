@@ -17,7 +17,11 @@ public class Apple extends Food {
     }
     // Переопределить способ употребления яблока
     public void consume() {
-        ((Food)this).consume();
+        super.consume();
+        size = null;
+    }
+    public String getName(){
+        return new String(size + " apple");
     }
     // Селектор для доступа к полю данных РАЗМЕР
     public String getSize() {

@@ -2,7 +2,7 @@ public abstract class Food implements Consumable, Nutritious{
     protected String name;
     protected int calories;
     public Food() {
-        this.name = this.getName();
+        this.name = this.getClass().getName();
         this.calories=0;
     }
     public Food(String name){
@@ -15,7 +15,7 @@ public abstract class Food implements Consumable, Nutritious{
         this.calories = calories;
         this.name = name;
     }
-    public void Consume(){
+    public void consume(){
         System.out.println("An object "+this.getName()+" was consumed");
         this.name = null;
         this.calories = 0;

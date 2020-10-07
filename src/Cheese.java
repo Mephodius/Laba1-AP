@@ -6,7 +6,7 @@ public class Cheese extends Food {
         this.calories = calories;
     }
     public void consume() {
-        System.out.println(this + " съеден");
+        super.consume();
     }
 
     @Override

@@ -1,10 +1,27 @@
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        Comparator compare = new Comparator(){
-            public boolean Compare(Food f1, Food f2){
-                return f1.getName().length()>f2.getName().length();
+    public static void main(String[] args) throws Exception
+    {
+        Comparator compare = new Comparator() {
+            @Override
+            public int compare(Object o, Object o2) {
+                if(o==null) {
+                    return 1;
+                }else if (o2==null){
+                    return -1;
+                } else {
+                   if(((Food)o).getName().length()>((Food)o2).getName().length()){
+                       return 1;
+                   } else if(((Food)o).getName().length()<((Food)o2).getName().length()){
+                       return -1;
+                   } else{
+                       return 0;
+                   }
+                }
+
             }
         };
         // Определение ссылок на продукты завтрака
@@ -39,12 +56,13 @@ public class Main {
                     } else {
                        throw new IllegalArgumentException();
                     }
-                } else if (parts[0].equals("Sandwitch")) {
+                } else if (parts[0].equals("Sandwich")) {
                     if (parts.length == 1) {
-                        breakfast[itemsSoFar] = new Sandwitch();
-                    } else if (parts.length == 4) {
-                        breakfast[itemsSoFar] = new Sandwitch(new Components(parts[1], Integer.valueOf(parts[2])), new Components(parts[3], Integer.valueOf(parts[4])));
+                        breakfast[itemsSoFar] = new Sandwich();
+                    } else if (parts.length == 5) {
+                        breakfast[itemsSoFar] = new Sandwich(new Components(parts[1], Integer.valueOf(parts[2])), new Components(parts[3], Integer.valueOf(parts[4])));
                     } else {
+                        System.out.println("Length "+parts.length);
                         throw new IllegalArgumentException();
                     }
                 } else if (parts[0].charAt(0) == '-') {
@@ -53,26 +71,24 @@ public class Main {
                         for (Food food: breakfast) {
                             if (food != null)
                                 calories += food.GetCalories();
-                            else break;
-
+                            else
+                                break;
                         }
+                        System.out.println("There is "+calories+" calories in your breakfast");
+
                     }
                     else if(parts[0].equals("-sort")) {
-                    for(int i = 0; i<itemsSoFar; i++){
-                       for(int j = 0; j<itemsSoFar-1; j++){
-                           if(compare.Compare(breakfast[j], breakfast[j+1])){
-                               Class tempfood = Class.forName(breakfast[j].getClass().getTypeName());
-                               breakfast[j] =  Class.forName(breakfast[j+1].getClass().getTypeName());
-                               breakfast[j] = breakfast[j+1]; //написать конструктор копирования
-                               breakfast[j+1] = Class.forName(tempfood.getClass().getTypeName());
-                               breakfast[j+1] = tempfood;
-                           }
-                       }
+                           Arrays.sort(breakfast, compare);
+                        System.out.println("Food was sorted");
+                    } else if(parts[0].equals("-show")) {
+                        for(Food food:breakfast){
+                            if (food != null)
+                            System.out.println(food.getName());
+                        }
                     }
-                    } else {
+                    else{
                     throw new NoSuchMethodException();
                     }
-                    break;
                 } else {
                     throw new ClassNotFoundException();
                 }
@@ -94,9 +110,10 @@ public class Main {
         }
 // Перебор всех элементов массива
         for (Food item: breakfast)
-            if (item!=null)
-// Если элемент не null – употребить продукт
+            if (item!=null) {
                 item.consume();
+            }
+// Если элемент не null – употребить продукт
             else
 // Если дошли до элемента null – значит достигли конца
 // списка продуктов, ведь 20 элементов в массиве было

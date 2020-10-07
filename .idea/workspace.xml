@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e982c554-2ee9-473e-811c-3a91c01b818f" name="Default Changelist" comment="" />
+    <list default="true" id="e982c554-2ee9-473e-811c-3a91c01b818f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Laba1Ver1.1/Apple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba1Ver1.1/Apple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Laba1Ver1.1/Cheese.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laba1Ver1.1/Cheese.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cheese.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cheese.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sandwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sandwich.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iHBzeyFklpqyyubnAWV0SbW8Jk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -35,17 +50,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Laba1Ver1.1" />
+      <option name="PROGRAM_PARAMETERS" value="Apple/Big/20 Cheese/200 Sandwich/cheese/50/bread/80 Sandwich/loaf/100/sosage/75 -calories -sort -show Cheese/100/100/100 Cheese/100 -sort -show -calories -sshw" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Malen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Malen" />
+      <option name="PROGRAM_PARAMETERS" value="Sandwich/cheese/10/bread/40" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Malen" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Malen" />
       </list>
     </recent_temporary>
   </component>
@@ -61,5 +89,18 @@
       <updated>1601554900438</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
